@@ -374,8 +374,8 @@ public class Barang extends javax.swing.JFrame {
             model.addColumn("Kode Barang");
             model.addColumn("Nama Barang");
             model.addColumn("Satuan");
-            model.addColumn("Stok");
             model.addColumn("Stok Barang");
+            model.addColumn("Stok Minimal");
 
             stmt = conn.createStatement();
             String sql = "SELECT * FROM barang";
@@ -388,7 +388,7 @@ public class Barang extends javax.swing.JFrame {
             		rs.getString("nm_brg"),
             		rs.getString("satuan"),
             		rs.getInt("stok_brg"),
-                        rs.getInt("stok_min")
+                    rs.getInt("stok_min")
             	});
             	i++;
             }
